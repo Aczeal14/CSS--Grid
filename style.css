@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template: 20% 20% 20% 20% 20% / 20% 20% 20% 20% 20%;
+  background-color: lightblue;
+}
+
+.room {
+  border: 1px solid black;
+  font-size: 50%;
+  text-align: center;
+}
+
+.living-room {
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.kitchen {
+  grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row-start: 3;
+  grid-row-end: 6;
+}
+
+.bedroom {
+  grid-column: 2 / 4;
+  grid-row: 3 / 5;
+}
+
+.bathroom {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 6;
+}
+
+.closet {
+  grid-column: 2 / 4;
+  grid-row: 5 / 6;
+}
