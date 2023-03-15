@@ -7,15 +7,14 @@
 
 .main-container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(12, 1fr);
+  grid-template-columns: 2fr 8fr;
+  grid-template-rows: 1fr .5fr 8fr .5fr;
   height: 99vh;
   gap: 5px;
 }
 
 .top {
-  border: 2px solid black;
-  grid-column: 1 / 6;
+  grid-column: 1 / 3;
   grid-row: 1 / 2;
   display: flex;
   justify-content: space-between;
@@ -41,23 +40,23 @@
 }
 
 .side {
-  overflow: auto;
-  border: 2px solid black;
   grid-column: 1 / 2;
-  grid-row: 2 / 12;
+  grid-row: 2 / 4;
+
   display: flex;
   flex-direction: column;
+  padding: 10px;
+  gap: 50px;
   background-color: rgba(239, 142, 38, 0.84);
 }
 
 .box {
-  border: 2px solid black;
-  width: 1fr;
-  height: 250px;
-  margin: 15px;
-  padding-top: 55px;
+  flex: 1;
   background-color: #fff;
-  
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .one {
@@ -69,30 +68,32 @@
 }
 
 .titles {
-  border: 2px solid black;
-  grid-column: 2 / 6;
+  grid-column: 2 / 3;
   grid-row: 2 / 3;
+  
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  color: white;
+  align-items: center;
+  
   background-color: rgba(239, 142, 38, 0.84);
+  height: 100%;
 }
 
 .title {
-  padding: 20px;
   text-align: center;
+  color: white;
+  font-size: 18px;
 }
 
 .main {
-  border: 2px solid black;
-  grid-column: 2 / 6;
-  grid-row: 3 / 12;
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
   background-color: #8597b18b;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
   grid-template-rows: repeat(4, 1fr);
-  gap: 10px;
-  padding: 10px;
+  gap: 15px;
+  padding: 15px;
 }
 
 .card {
@@ -110,14 +111,13 @@
 }
 
 .bot {
-  border: 2px solid black;
-  grid-column: 1 / 6;
-  grid-row: 12 / 13;
+  grid-column: 1 / 3;
+  grid-row: 4 / 5;
   background-color: #363f54;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
 }
 
-.bot p {
-  text-align: center;
-  color: #fff;
-  padding: 20px;
-}
